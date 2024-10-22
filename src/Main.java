@@ -21,6 +21,9 @@ public class Main {
             } else if (gameNumber == 2) {
                 // 2. 게임 기록 보기
                 System.out.println("< 게임 기록 보기 >");
+                if(gameTryList.isEmpty()) {
+                    System.out.println("게임을 진행하지 않아 기록이 없습니다.");
+                }
                 for (int i = 0; i < gameTryList.size(); i++) {
                     System.out.println((i + 1) + "번째 게임 : 시도 횟수 - " + gameTryList.get(i));
                 }
