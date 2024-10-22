@@ -25,6 +25,7 @@ public class BaseballGame {
     public int play() {
         int gameCount = 0;
         Scanner scanner = new Scanner(System.in);
+        BaseballGameDisplay baseballGameDisplay = new BaseballGameDisplay();
         System.out.println("< 게임을 시작합니다 >");
         while (true) {
             System.out.println("정답 : " + answer);
@@ -55,7 +56,7 @@ public class BaseballGame {
                 break;
             }
             // 7. 힌트 출력
-            System.out.println(strikes + "스트라이크 " + balls + "볼");
+            baseballGameDisplay.displayHint(strikes, balls);
         }
         // 게임 진행횟수 반환
         return gameCount;
